@@ -25,7 +25,7 @@
 	String.Format = function() {
 		var s = arguments[0];
 		for (var i = 0; i < arguments.length - 1; i++) {
-			var reg = new RegExp("\\{" + i + "\\}", "gm");
+			var reg = new RegExp('\\{' + i + '\\}', 'gm');
 			s = s.replace(reg, arguments[i + 1]);
 		}
 		return s;
@@ -152,7 +152,7 @@
 	 * @returns {String} - string has US number format
 	 */
 	$.formatCurrency = function(str) {
-		return str.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		return str.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
 	};
 
 	/*
